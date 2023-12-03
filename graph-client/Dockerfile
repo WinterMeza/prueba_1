@@ -4,7 +4,7 @@ WORKDIR /index
 COPY package*.json ./
 RUN npm install
 
-#Build y Test
+#Build y Tests
 FROM node:19.2-alpine3.16 AS builder
 WORKDIR /index
 COPY --from=deps /index/node_modules ./node_modules
